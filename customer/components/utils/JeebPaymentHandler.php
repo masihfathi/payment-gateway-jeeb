@@ -44,8 +44,8 @@ class JeebPaymentHandler extends PaymentHandlerAbstract
             'baseCurrencyId' =>(string)$model->base_currency_id,
             'baseAmount' => (float)$order->total,
             'webhookUrl'=>$webhookUrl,
-            'callbackUrl'=>$returnUrl,
-            'allowTestNets' => true
+            'callbackUrl'=>$returnUrl
+            //'allowTestNets' => true
         ];
         $jeebConnection = new JeebConnection($model->merchant_code);
         try{
